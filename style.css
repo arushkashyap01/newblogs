@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background: radial-gradient(circle, #ff5f8f, #160018);
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.text {
+  position: absolute;
+  bottom: 35px;
+  width: 100%;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
+  letter-spacing: 2px;
+  opacity: 0.85;
+}body {
+  margin: 0;
+  background: #121212;
+  overflow: hidden;
+}
+
+#balloon-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+.balloon {
+  position: absolute;
+  bottom: -150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* The Heart Shape */
+.heart {
+  width: 30px;
+  height: 30px;
+  background-color: #ff4d6d;
+  position: relative;
+  transform: rotate(-45deg);
+  box-shadow: -5px 5px 15px rgba(0,0,0,0.3); /* Adds a bit of depth */
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: inherit;
+  border-radius: 50%;
+}
+
+.heart::before { top: -15px; left: 0; }
+.heart::after { top: 0; left: 15px; }
+
+/* The Balloon String */
+.string {
+  width: 1px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.4);
+  margin-top: 15px; /* Offset because of the heart rotation */
+  z-index: -1;
+}
+
+/* Keyframes for a gentle side-to-side wobble */
+@keyframes wobble {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(20px); }
+}
+body.balloon {
+  margin: 0;
+  background: #121212;
+  overflow: hidden;
+}
+
+#balloon-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+.balloon {
+  position: absolute;
+  bottom: -150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* The Heart Shape */
+.heart {
+  width: 30px;
+  height: 30px;
+  background-color: #ff4d6d;
+  position: relative;
+  transform: rotate(-45deg);
+  box-shadow: -5px 5px 15px rgba(0,0,0,0.3); /* Adds a bit of depth */
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: inherit;
+  border-radius: 50%;
+}
+
+.heart::before { top: -15px; left: 0; }
+.heart::after { top: 0; left: 15px; }
+
+/* The Balloon String */
+.string {
+  width: 1px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.4);
+  margin-top: 15px; /* Offset because of the heart rotation */
+  z-index: -1;
+}
+
+/* Keyframes for a gentle side-to-side wobble */
+@keyframes wobble {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(20px); }
+}
+body {
+  margin: 0;
+  overflow: hidden;
+  background: linear-gradient(to top, #ffdde1, #ee9ca7);
+  height: 100vh;
+}
+
+.balloon-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.balloon {
+  position: absolute;
+  bottom: -150px;
+  width: 60px;
+  height: 80px;
+  border-radius: 50%;
+  animation: floatUp linear infinite;
+}
+
+/* Balloon string */
+.balloon::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 50px;
+  background: #555;
+  left: 50%;
+  top: 80px;
+  transform: translateX(-50%);
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-120vh) translateX(50px);
+    opacity: 0;
+  }
+}
+
